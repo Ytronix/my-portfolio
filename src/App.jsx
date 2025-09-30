@@ -1,12 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import './Fonts/anurati-webfont/style.css';
+import './Fonts/quick-webfont/stylesheet.css'
+import BgVideo from './Components/BgVideo';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
 
 function App() {
 
   return (
     <>
-      <h1 className="animate__animated animate__fadeInRight">Vite + React</h1>
+      <BgVideo></BgVideo>
+      
+      <Navbar></Navbar>
+
+      <main>
+        <Hero></Hero>
+      </main>
     </>
   );
 }
