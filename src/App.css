@@ -5,7 +5,12 @@
 :root {
   --primary-color: white;
   --secondary-color: #727fde;
-  --title-gradient: conic-gradient(transparent, transparent, transparent, #6979f9);
+  --title-gradient: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #6979f9
+  );
 }
 
 .anurati {
@@ -19,41 +24,50 @@
   letter-spacing: 0.1em;
 }
 
-.nav-btn{
-  color: var(--secondary-color);
-  transition: color 1s ease-in-out,
-  box-shadow 0.1s ease-in-out 0.3s;
+.menu li > a:hover,
+.menu li > a:focus {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
-.contact{
+.nav-btn {
+  color: var(--secondary-color);
+  transition: color 1s ease-in-out, box-shadow 0.1s ease-in-out 0.2s;
+}
+
+.contact {
   border: 2px solid var(--secondary-color);
 }
 
-.nav-btn::after{
-  content: '';
+.nav-btn::after {
+  content: "";
   position: absolute;
   top: 0;
   left: -0.5px;
   width: 102%;
   height: 100%;
   border-radius: 24px;
-  background: var(--secondary-color); 
+  background: var(--secondary-color);
   clip-path: circle(0% at 50% 50%);
   z-index: -1;
   transition: 0.85s ease;
 }
 
-.nav-btn:hover::after{
+.nav-btn:hover::after {
   clip-path: circle(100% at 50% 50%);
 }
 
-.nav-btn:hover{
-  color: var(--primary-color);
-  box-shadow: 0 0 10px var(--secondary-color),
-  0 0 50px var(--secondary-color);
+.active-state::after {
+  clip-path: circle(100% at 50% 50%);
 }
 
-.info_name{
+.nav-btn:hover,
+.active-state {
+  color: var(--primary-color);
+  box-shadow: 0 0 10px var(--secondary-color), 0 0 50px var(--secondary-color);
+}
+
+.info_name {
   background: var(--secondary-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,8 +75,8 @@
   background-size: 200%;
 }
 
-.info-title::before{
-  content: '';
+.info-title::before {
+  content: "";
   position: absolute;
   width: 200%;
   height: 70%;
@@ -70,8 +84,8 @@
   animation: glow 4s linear infinite;
 }
 
-.info-title::after{
-  content: '';
+.info-title::after {
+  content: "";
   position: absolute;
   width: 200%;
   height: 70%;
@@ -80,16 +94,16 @@
   animation-delay: 2s;
 }
 
-.info_link:hover{
+.info_link:hover {
   color: #727fde;
   transition: all 0.5s ease-in;
 }
 
-@keyframes glow{
-  0%{
+@keyframes glow {
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
