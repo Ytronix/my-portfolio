@@ -4,8 +4,8 @@ import { AiOutlineSend } from "react-icons/ai";
 
 const Navbar = ({ active, setActive, setToggle }) => {
   return (
-    <div className="animate__animated animate__fadeInUp">
-      <div className="w-[90vw] mx-auto flex justify-between items-center py-1 px-5 lg:px-10 bg-[#f5f5f520] rounded-full relative top-2.5 backdrop-blur shadow">
+    <div className="animate__animated animate__fadeInUp animate__slower">
+      <div className="w-[90vw] mx-auto flex justify-between items-center py-1 px-5 lg:px-10 bg-[#f5f5f520] rounded-full relative top-2.5 backdrop-blur-3xl shadow">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -5,7 +5,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hidden animate__animated animate__fadeInDown lg:flex flex-row-reverse justify-between mt-8 overflow-hidden">
+      <div className="hidden animate__animated animate__fadeInDown animate__slow lg:flex flex-row-reverse justify-between mt-8 overflow-hidden">
         <img
           src={Myphoto}
           alt=""

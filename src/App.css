@@ -99,11 +99,43 @@
   transition: all 0.5s ease-in;
 }
 
-@keyframes glow {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.about-me {
+  background: #fff;
+}
+
+.about-me::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: var(--secondary-color);
+  filter: blur(20px);
+}
+
+.about-me::before,
+.about-me:after {
+  background: #727fde;
+}
+
+.link-container {
+  box-shadow: 0 0 10px #424a66, 0 0 50px #424a66;
+}
+
+.link-control {
+  position: relative;
+  transform-origin: 14px 14px;
+  transition: transform 1.2s ease-in-out;
+}
+
+.links {
+  transform: rotate(135deg);
+  transform-origin: 15px 12px;
+}
+
+.social-open {
+  transform: rotate(-135deg);
+}
+
+.social-close {
+  transform: rotate(0deg);
 }
